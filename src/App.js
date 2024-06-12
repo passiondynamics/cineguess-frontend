@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.css';
-import BoxContainer from './components/BoxContainer';
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import SearchBar from './components/SearchBar';
+
+import React from 'react';
+
 import Attempts from './components/Attempts';
-import Guesses from './components/Guesses';
+import BoxContainer from './components/BoxContainer';
 import GameOver from './components/GameOver';
+import Guesses from './components/Guesses';
+import SearchBar from './components/SearchBar';
+import './App.css';
 
 
 const App = () => {
