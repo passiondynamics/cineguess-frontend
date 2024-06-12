@@ -25,9 +25,11 @@ const App = () => {
           </div>
           <div className='game-content'>
         <BoxContainer images={images} />
-<Attempts />
+    <Attempts />
         <div className='guess-container'>
           <SearchBar />
+          <Guesses />
+
 
 
 

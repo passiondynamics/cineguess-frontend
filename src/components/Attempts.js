@@ -1,6 +1,10 @@
 import React from 'react';
 import '../App.css';
 import { GoDotFill } from "react-icons/go";
+/**
+ *
+ * When a user gets an answer wrong after hitting submit in SearchBar.js, one dot should disappear.
+ */
 
 const Attempts = () => {
   return (

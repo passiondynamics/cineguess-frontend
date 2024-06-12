@@ -1,6 +1,12 @@
 import React from 'react';
 import '../App.css'
 
+/**
+ *
+ * Component that hold images we find on the internet
+ *
+ */
+
 const BoxContainer = ({ images }) => {
   return (
     <div className="box-container">
