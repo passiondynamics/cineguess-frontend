@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="App">
         <div className='header'>
-          <img src="cineguessLogo.PNG" width={250} height={50} alt="logo" className="logo" />
+          <img src="cineguessLogo.png" width={250} height={50} alt="logo" className="logo" />
           <IoIosInformationCircleOutline size={30} />
           </div>
           <div className='game-content'>
@@ -31,9 +31,6 @@ const App = () => {
         <div className='guess-container'>
           <SearchBar />
           <Guesses />
-
-
-
 
         </div>
       </div>
