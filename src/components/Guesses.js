@@ -1,22 +1,31 @@
-import React from "react";
+import React from 'react';
+import { IoIosClose, IoIosCheckmark } from "react-icons/io";
+import './Guesses.css'; // Import the CSS file
 
 /**
- * This component should store/display the guesses after a user hits submit in SearchBar.js
- *
+ * Guesses component to display the list of user's guesses.
+ * 
+ * @param {Object} props - The component props.
+ * @param {Array<string>} props.guesses - Array of user's guesses.
+ * @param {string} props.correctAnswer - The correct answer to compare guesses against.
+ * @returns {JSX.Element} The HTML for displaying the list of guesses.
  */
-
-const Guesses = () => {
-    return (
-        <div className="guesses">
-         <div className="guesses-input">
-        <input
-          type="text"
-          placeholder="This is where the guess will go"
-          className="guesses-input"
-        />
-      </div>
-          </div>
-      );
+const Guesses = ({ guesses = [], correctAnswer }) => {
+  return (
+    <div className="guesses">
+      <ul>
+        {guesses.slice(0).reverse().map((guess, index) => {
+          const isCorrect = guess.toLowerCase() === correctAnswer.toLowerCase();
+          return (
+            <li key={index} className={isCorrect ? 'correct' : 'incorrect'}>
+              <span className="icon">{isCorrect ? <IoIosCheckmark /> : 'X'}</span> {/* Display 'X' or checkmark */}
+              {guess}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default Guesses;

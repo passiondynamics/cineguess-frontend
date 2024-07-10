@@ -1,0 +1,65 @@
+/* Search Bar Styling */
+
+.search-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px; /* Added padding between search bar and guesses */
+}
+
+.search-input {
+  /* width: calc(100% - 80px); */
+  padding: 15px;
+  border: 2px solid #ccc;
+  /* border-radius: 25px; */
+  font-size: 18px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.search-button {
+  padding: 15px 20px;
+  border: 2px solid #ccc;
+  /* border-radius: 25px; */
+  font-size: 18px;
+  outline: none;
+  background-color: #90EE90; /* Light green background color */
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #77dd77;
+}
+
+.suggestions-list {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}

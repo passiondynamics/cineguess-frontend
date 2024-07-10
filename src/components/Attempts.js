@@ -1,21 +1,19 @@
 import React from 'react';
-import '../App.css';
-import { GoDotFill } from "react-icons/go";
-/**
- *
- * When a user gets an answer wrong after hitting submit in SearchBar.js, one dot should disappear.
- */
+import './Attempts.css'; // Import the CSS file
 
-const Attempts = () => {
+/**
+ * Attempts component to display the remaining attempts as dots.
+ * 
+ * @param {Object} props - The component props.
+ * @param {number} props.attemptsLeft - The number of remaining attempts.
+ * @returns {JSX.Element} The HTML for displaying the remaining attempts as dots.
+ */
+const Attempts = ({ attemptsLeft }) => {
   return (
-    //no official logic with this yet either
     <div className="attempts">
-      <p>Attempts remaining: </p>
-      <div className='dots'>
-      <GoDotFill size={30}/>
-      <GoDotFill size={30}/>
-      <GoDotFill size={30}/>
-      </div>
+      {[...Array(attemptsLeft)].map((_, index) => (
+        <div key={index} className="attempt-dot"></div>
+      ))}
     </div>
   );
 };

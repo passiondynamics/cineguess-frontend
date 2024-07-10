@@ -1,0 +1,35 @@
+/* Guesses.css */
+.guesses {
+    margin-top: 20px;
+    background-color: transparent; /* Blend with the page */
+  }
+  
+  .guesses ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .guesses .guess-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .guesses .correct {
+    background-color: lightgreen;
+    color: black;
+  }
+  
+  .guesses .incorrect {
+    background-color: lightcoral;
+    color: black;
+  }
+  
+  .guesses .icon {
+    margin-right: 10px; /* Move icon to the left */
+    font-size: 20px;
+  }
+  
