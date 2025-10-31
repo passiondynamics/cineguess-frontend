@@ -2,7 +2,8 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import React, { useState } from 'react';
 import Attempts from './components/Attempts';
 import BoxContainer from './components/BoxContainer';
-import GameOver from './components/GameOver';
+import GameOverWin from './components/GameOverWin';
+import GameOverLoss from './components/GameOverLoss';
 import Guesses from './components/Guesses';
 import SearchBar from './components/SearchBar';
 import './App.css';
@@ -16,7 +17,8 @@ const App = () => {
   // State variables
   const [guesses, setGuesses] = useState([]); // Initialize as an empty array
   const [attempts, setAttempts] = useState(3); // Initial attempts set to 3
-  const [isGameOver, setIsGameOver] = useState(false);
+  const [isGameOverWin, setIsGameOverWin] = useState(false);
+  const [isGameOverLoss, setIsGameOverLoss] = useState(false);
 
   const images = [
     { src: 'math.webp', alt: 'Image 1' },
@@ -45,11 +47,11 @@ const App = () => {
     setGuesses([...guesses, guess]);
 
     if (guess.toLowerCase() === correctAnswer.toLowerCase()) {
-      setIsGameOver(true);
+      setIsGameOverWin(true);
     } else {
       setAttempts(attempts - 1);
       if (attempts - 1 <= 0) {
-        setIsGameOver(true);
+        setIsGameOverLoss(true);
       }
     }
   };
@@ -61,8 +63,10 @@ const App = () => {
         <IoIosInformationCircleOutline size={30} />
       </div>
       <div className='game-content'>
-        {isGameOver ? (
-          <GameOver />
+        {isGameOverWin ? (
+          <GameOverWin />
+        ) : isGameOverLoss ? (
+          <GameOverLoss />
         ) : (
           <>
             <BoxContainer images={images} />

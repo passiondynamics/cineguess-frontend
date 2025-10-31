@@ -3,17 +3,17 @@ import '../App.css';
 
 /**
  *
- * Displays when a user guesses the correct film or runs out of attempts
+ * Displays when a user guesses the incorrect film
  */
 
-const GameOver = () => {
+const GameOverLoss = () => {
     return (
       <div className='nice-try'>
-        <p>Nice one, the correct answer is:</p>
+        <p>Not this time, the correct answer was:</p>
         <h2 className='movie-name'>Interstellar</h2>
         <h3>Next game in | 12:02:12</h3>
       </div>
     );
   }
 
-export default GameOver;
+export default GameOverLoss;
