@@ -9,35 +9,36 @@
 }
 
 .search-input {
-  /* width: calc(100% - 80px); */
   padding: 15px;
   border: 2px solid #ccc;
-  /* border-radius: 25px; */
+  border-radius: 10px; /* Matches button's rounded corners */
   font-size: 18px;
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-input::placeholder {
-  color: #999;
-  font-style: italic;
+.search-input:focus {
+  border-color: #000000; /* Light green border on focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .search-button {
   padding: 15px 20px;
   border: 2px solid #ccc;
-  /* border-radius: 25px; */
+  border-radius: 10px; /* Rounded rectangle corners */
   font-size: 18px;
   outline: none;
-  background-color: #90EE90; /* Light green background color */
+  background-color: #90EE90; /* Light green background */
   margin-left: 10px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .search-button:hover {
-  background-color: #77dd77;
+  background-color: #7fdc7f; /* Slightly darker on hover */
+  transform: translateY(-2px);
 }
 
 .suggestions-list {
